@@ -1,10 +1,4 @@
-import {
-  CalendarHeart,
-  Clock,
-  Coffee,
-  Laptop,
-  ShieldCheck,
-} from "lucide-react";
+import { Clock, MapPin, ShieldCheck, UserRound } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 type Vorteil = {
@@ -16,35 +10,29 @@ type Vorteil = {
 
 const VORTEILE: Vorteil[] = [
   {
-    icon: Coffee,
-    title: "Ganz auf dich abgestimmt",
+    icon: UserRound,
+    title: "Einzelunterricht 1:1",
     description:
-      "Wir lernen, was dich wirklich interessiert: das Gespräch im Café in Sevilla, die Speisekarte in Valencia, der Anruf bei den Nachbarn in deinem Ferienhaus. Kein starrer Lehrplan.",
-  },
-  {
-    icon: CalendarHeart,
-    title: "Dein Tempo, deine Tageszeit",
-    description:
-      "Vormittags, nachmittags, wann immer es dir passt. Kein Abendstress, keine Hektik.",
+      "Volle Aufmerksamkeit, dein Tempo, dein Lernplan. Keine Ablenkung durch andere Teilnehmer:innen.",
   },
   {
     icon: Clock,
-    title: "60 echte Minuten, keine «Schulstunde»",
+    title: "60 Minuten pro Lektion",
     description:
-      "Viele unterrichten 45 Minuten und nennen das eine Stunde. Bei mir bekommst du volle 60.",
-    highlight: "33 % mehr als üblich",
+      "Genug Zeit, um Themen wirklich zu verstehen und zu üben.",
+    highlight: "25% mehr als der Marktstandard",
   },
   {
-    icon: Laptop,
-    title: "Wo du möchtest",
+    icon: MapPin,
+    title: "Flexibel & ortsunabhängig",
     description:
-      "Online aus deinem Wohnzimmer. Falls du mit dem Computer nicht so vertraut bist, helfe ich dir beim Einrichten. Oder wir treffen uns bei mir in Zürich.",
+      "Online aus der ganzen Schweiz oder vor Ort in Zürich – du wählst, was zu deinem Alltag passt.",
   },
   {
     icon: ShieldCheck,
-    title: "Keine Abos. Keine Verpflichtung.",
+    title: "Keine Abos, kein Risiko",
     description:
-      "CHF 60 pro Lektion. Du buchst, wann es passt. Ferien, Arzttermin, Besuch von den Enkeln? Kein Problem.",
+      "Faire CHF 60 pro Lektion. Du zahlst nur, wenn du wirklich Zeit hast – volle Freiheit.",
   },
 ];
 
@@ -57,15 +45,15 @@ export function Vorteile() {
             Deine Vorteile
           </span>
           <h2 className="mt-4 font-display text-3xl font-semibold leading-tight tracking-tight text-ink sm:text-4xl">
-            Warum dieser Unterricht zu dir passt
+            Warum Schüler:innen mit mir lernen
           </h2>
           <p className="mt-3 text-base text-ink-soft sm:text-lg">
-            Kein starres Schulbuch, kein Druck. Einfach Spanisch, so wie du es
-            dir vorgestellt hast.
+            Unterricht, der sich wirklich nach dir richtet – nicht nach einem
+            Standard-Curriculum.
           </p>
         </div>
 
-        <ul className="mt-12 grid gap-5 md:mt-16 md:grid-cols-2 md:gap-6 lg:grid-cols-3">
+        <ul className="mt-12 grid gap-5 sm:grid-cols-2 md:mt-16 md:gap-6 lg:grid-cols-4">
           {VORTEILE.map(({ icon: Icon, title, description, highlight }) => (
             <li
               key={title}
@@ -80,7 +68,7 @@ export function Vorteile() {
               <h3 className="mt-5 font-display text-lg font-semibold text-ink">
                 {title}
               </h3>
-              <p className="mt-2 text-base leading-relaxed text-ink-soft">
+              <p className="mt-2 text-sm leading-relaxed text-ink-soft">
                 {description}
               </p>
               {highlight && (

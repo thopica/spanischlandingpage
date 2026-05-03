@@ -1,59 +1,62 @@
 import { Star } from "lucide-react";
+import Image from "next/image";
 
 type Testimonial = {
   name: string;
   role: string;
   quote: string;
+  image: string;
 };
 
 const TESTIMONIALS: Testimonial[] = [
   {
-    name: "Margrit, 68",
-    role: "Küsnacht",
+    name: "Thomas",
+    role: "Anfänger",
+    image: "/images/thomas.png",
     quote:
-      "Ich hatte Spanisch immer auf der Liste. Mit Cristina habe ich endlich angefangen, und es macht so viel Freude, wie ich es mir erhofft hatte.",
+      "Erstaunlich schnell konnte ich einfache Sätze auf Spanisch sagen. Vielen Dank Cristina!",
   },
   {
-    name: "Hans-Peter, 71",
-    role: "Zürich",
+    name: "Regula",
+    role: "Reisende",
+    image: "/images/regula.png",
     quote:
-      "Wir verbringen jedes Jahr drei Monate in Andalusien. Beim letzten Besuch konnte ich zum ersten Mal mit den Nachbarn richtig plaudern. Das war ein Moment.",
+      "Ich freue mich jedes Mal auf den Unterricht. Inzwischen kann ich mich ohne Probleme im Ausland auf Spanisch verständigen.",
   },
   {
-    name: "Verena, 64",
-    role: "Wädenswil",
+    name: "Eva",
+    role: "Fortgeschrittene",
+    image: "/images/eva.png",
     quote:
-      "Ich hatte Sorge, ob das in meinem Alter noch geht. Cristina hat mir vom ersten Tag an das Gefühl gegeben: doch, das geht. Und wie!",
+      "In kurzer Zeit konnte ich gute Fortschritte machen, da Cristina den Unterricht genau an meine Wünsche und mein Tempo angepasst hat. So macht das Lernen sehr viel Spass und ich freue mich auf jede weitere Lektion.",
+  },
+  {
+    name: "Pascal",
+    role: "Unternehmer",
+    image: "/images/pascal.png",
+    quote:
+      "Als Unternehmer ist meine Zeit knapp. Cristinas flexible Unterrichtszeiten ermöglichen es mir, Spanisch effektiv zu lernen, ohne meinen Arbeitsalltag zu stören.",
   },
 ];
 
-function initials(name: string) {
-  return name
-    .split(/[\s,-]+/)
-    .filter(Boolean)
-    .slice(0, 1)
-    .map((n) => n[0]?.toUpperCase() ?? "")
-    .join("");
-}
-
 export function Testimonials() {
   return (
-    <section className="bg-cream px-4 py-16 md:px-8 md:py-24">
+    <section className="bg-cream px-4 py-14 md:px-8 md:py-20">
       <div className="mx-auto max-w-6xl">
         <div className="mx-auto max-w-2xl text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-brand-200 bg-brand-50 px-3 py-1 text-xs font-medium uppercase tracking-wider text-brand-700">
-            Stimmen
+            Bewertungen
           </span>
           <h2 className="mt-4 font-display text-3xl font-semibold leading-tight tracking-tight text-ink sm:text-4xl">
-            Was meine Schülerinnen und Schüler erzählen
+            Was meine Schüler:innen sagen
           </h2>
         </div>
 
-        <ul className="mt-10 grid gap-5 md:mt-14 md:grid-cols-3 md:gap-6">
+        <ul className="mt-8 grid gap-4 sm:grid-cols-2 md:mt-10 lg:grid-cols-4">
           {TESTIMONIALS.map((t) => (
             <li
               key={t.name}
-              className="flex flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-ink/5 transition hover:-translate-y-0.5 hover:shadow-md sm:p-7"
+              className="flex flex-col rounded-2xl bg-white p-5 shadow-sm ring-1 ring-ink/5 transition hover:-translate-y-0.5 hover:shadow-md"
             >
               <div
                 className="flex items-center gap-0.5"
@@ -63,23 +66,24 @@ export function Testimonials() {
                   <Star
                     key={i}
                     aria-hidden
-                    className="size-4 fill-brand-400 text-brand-400"
+                    className="size-3.5 fill-brand-400 text-brand-400"
                   />
                 ))}
               </div>
 
-              <blockquote className="mt-4 grow text-base leading-relaxed text-ink/85">
-                «{t.quote}»
+              <blockquote className="mt-3 grow text-sm leading-relaxed text-ink/85">
+                {t.quote}
               </blockquote>
 
-              <div className="mt-5 flex items-center gap-3 border-t border-ink/5 pt-4">
-                <span
-                  aria-hidden
-                  className="grid size-10 shrink-0 place-items-center rounded-full bg-brand-100 font-display text-base font-semibold text-brand-700"
-                >
-                  {initials(t.name)}
-                </span>
-                <div className="text-sm leading-tight">
+              <div className="mt-4 flex items-center gap-2.5">
+                <Image
+                  src={t.image}
+                  alt={`Porträt von ${t.name}`}
+                  width={32}
+                  height={32}
+                  className="size-8 rounded-full object-cover"
+                />
+                <div className="text-xs leading-tight">
                   <div className="font-semibold text-ink">{t.name}</div>
                   <div className="text-ink-soft">{t.role}</div>
                 </div>

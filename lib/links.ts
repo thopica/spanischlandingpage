@@ -1,7 +1,5 @@
-export const PHONE_DISPLAY = "077 292 09 03";
+export const PHONE_DISPLAY = "+41 77 292 09 03";
 export const PHONE_TEL = "tel:+41772920903";
-export const PHONE_HOURS =
-  "Werktags von 9 bis 18 Uhr, am liebsten zwischen 10 und 12.";
 
 const WHATSAPP_DIGITS = "41789031057";
 const WHATSAPP_PRESET =

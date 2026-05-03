@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { Phone } from "lucide-react";
-import { PHONE_DISPLAY, PHONE_TEL } from "@/lib/links";
+import { MessageCircle } from "lucide-react";
+import { WhatsAppLink } from "@/components/WhatsAppLink";
 
 export function Header() {
   return (
@@ -17,13 +17,12 @@ export function Header() {
             Spanisch <span className="text-brand-500">mit Cristina</span>
           </span>
         </Link>
-        <a
-          href={PHONE_TEL}
-          className="hidden h-10 items-center gap-2 rounded-full bg-ink px-4 text-sm font-semibold text-cream shadow-sm transition hover:bg-brand-500 md:inline-flex"
-          aria-label={`Cristina anrufen: ${PHONE_DISPLAY}`}
+        <WhatsAppLink
+          source="header"
+          className="hidden h-10 items-center gap-2 rounded-full bg-success px-4 text-sm font-semibold text-white shadow-sm transition hover:bg-success-dark md:inline-flex"
         >
-          <Phone className="size-4" /> {PHONE_DISPLAY}
-        </a>
+          <MessageCircle className="size-4" /> WhatsApp
+        </WhatsAppLink>
       </div>
     </header>
   );

@@ -7,41 +7,29 @@ type FaqItem = {
 
 const FAQS: FaqItem[] = [
   {
-    question: "Bin ich nicht zu alt, um eine neue Sprache zu lernen?",
+    question: "Ich bin absoluter Anfänger – kann ich trotzdem starten?",
     answer:
-      "Ganz klar nein. Das ist sogar der häufigste Grund, warum Menschen gar nicht erst anfangen, und einer der hartnäckigsten Mythen. Erwachsene haben einen grossen Vorteil: du weisst, wie Sprache funktioniert, du hast Lebenserfahrung, du weisst, was du sagen willst. Was Kinder über jahrelange Wiederholung lernen, lernst du durch Verstehen. Das geht oft schneller.",
+      "Absolut. Mehr als die Hälfte meiner Schüler:innen startet bei null. Wir beginnen ganz entspannt mit den Grundlagen und du wirst schon in den ersten Lektionen einfache Sätze auf Spanisch sagen können.",
   },
   {
-    question:
-      "Ich kenne mich mit Computern nicht so gut aus. Kann ich trotzdem online lernen?",
+    question: "Wie viele Lektionen brauche ich, um etwas sagen zu können?",
     answer:
-      "Ja, und ich helfe dir Schritt für Schritt. Wir nutzen Zoom. Das ist ein Programm, das ich dir einmal kurz einrichte (auf Wunsch auch telefonisch). Danach ist es ein Klick, und wir sind verbunden. Falls online für dich nicht das Richtige ist, treffen wir uns einfach bei mir in Zürich.",
+      "Das hängt von deinem Ziel ab. Für einfache Konversation im Urlaub reichen oft 8 – 12 Lektionen. Für berufliches Spanisch oder fliessende Konversation planen wir gemeinsam einen längeren Lernweg. Wir besprechen das in der Probelektion.",
   },
   {
-    question: "Wie schnell kann ich erste Sätze sprechen?",
+    question: "Online oder vor Ort in Zürich – was ist besser?",
     answer:
-      "Schon in der ersten Lektion. Spanisch ist eine dankbare Sprache für den Anfang: die Aussprache ist klar, und viele Wörter ähneln dem Französischen oder Italienischen, das du vielleicht aus der Schule kennst.",
-  },
-  {
-    question: "Muss ich Hausaufgaben machen?",
-    answer:
-      "Nein, nichts muss. Wer mag, bekommt von mir Material zum Üben zwischen den Lektionen. Wer einfach nur in der Stunde lernen möchte, ist auch willkommen.",
+      "Beides funktioniert hervorragend. Online sparst du Zeit und kannst von überall in der Schweiz teilnehmen. Vor Ort in Zürich bietet mehr persönliche Atmosphäre. Du entscheidest – und kannst auch zwischen beiden Formaten wechseln.",
   },
   {
     question: "Wann findet der Unterricht statt?",
     answer:
-      "Wann es dir passt. Vormittags, nachmittags, am Wochenende. Termine machen wir flexibel ab.",
+      "Die Termine vereinbaren wir flexibel nach deinem Kalender – auch abends oder am Wochenende. Es gibt keinen festen Stundenplan, der dir den Stress nimmt.",
   },
   {
     question: "Wie funktioniert die Bezahlung?",
     answer:
-      "CHF 60 pro 60-Minuten-Lektion, nach der Lektion. Per TWINT, Banküberweisung oder bar in Zürich. Keine Abos, keine Vorauszahlung.",
-  },
-  {
-    question:
-      "Kann ich auch zu zweit lernen, zum Beispiel mit meinem Mann oder meiner Frau?",
-    answer:
-      "Sehr gerne. Schreib mir oder ruf mich an, wir finden eine passende Lösung.",
+      "CHF 60 pro 60-Minuten-Lektion. Bezahlt wird, wann es dir passt – TWINT, Banküberweisung oder bar in Zürich. Keine Abos, keine Vorauszahlungen, keine versteckten Kosten.",
   },
 ];
 
@@ -54,10 +42,10 @@ export function Faq() {
             Häufige Fragen
           </span>
           <h2 className="mt-4 font-display text-3xl font-semibold leading-tight tracking-tight text-ink sm:text-4xl">
-            Antworten auf häufige Fragen
+            Was du wissen möchtest – beantwortet
           </h2>
           <p className="mt-3 text-base text-ink-soft sm:text-lg">
-            Falls deine Frage nicht dabei ist: ruf an oder schreib mir kurz.
+            Wenn deine Frage nicht dabei ist, schreib mir einfach per WhatsApp.
           </p>
         </div>
 

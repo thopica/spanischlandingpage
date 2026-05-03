@@ -1,12 +1,12 @@
-import { ArrowRight, Check, Phone } from "lucide-react";
-import { PHONE_DISPLAY, PHONE_TEL } from "@/lib/links";
+import { ArrowRight, Check, MessageCircle } from "lucide-react";
+import { WhatsAppLink } from "@/components/WhatsAppLink";
 
 const INCLUSIONS = [
-  "CHF 60 pro 60-Minuten-Lektion",
-  "Privatunterricht 1:1",
-  "Bei dir online oder bei mir in Zürich",
-  "Bezahlung nach Lektion: TWINT, Überweisung oder bar",
-  "Keine Abos. Keine Vorauszahlung.",
+  "60 Minuten reine Lektionszeit (kein 45-Minuten-Trick)",
+  "Privatunterricht 1:1, persönlich auf dich abgestimmt",
+  "Online aus der ganzen Schweiz oder vor Ort in Zürich",
+  "Keine Abos, keine Verpflichtungen – buche, wann es passt",
+  "Zahlungsmethode frei wählbar (TWINT, Überweisung, Bar)",
 ];
 
 export function Preis() {
@@ -26,11 +26,11 @@ export function Preis() {
           Preis
         </span>
         <h2 className="mt-4 font-display text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">
-          Ein klarer Preis. Keine Überraschungen.
+          Ein fairer Preis. Keine Überraschungen.
         </h2>
         <p className="mt-3 text-base text-cream/70 sm:text-lg">
-          Du bezahlst nur die Lektionen, die du wirklich nimmst. Die erste ist
-          gratis, damit du in Ruhe schauen kannst, ob es passt.
+          Du zahlst nur die Lektionen, die du wirklich nimmst. Und die erste ist
+          gratis.
         </p>
 
         <div className="mt-12 rounded-[2rem] bg-white p-7 text-left text-ink shadow-2xl shadow-black/30 ring-1 ring-white/10 sm:p-10">
@@ -38,7 +38,7 @@ export function Preis() {
             <div>
               <span className="inline-flex items-center gap-1.5 rounded-full bg-success/10 px-3 py-1 text-xs font-semibold text-success-dark">
                 <span aria-hidden className="size-1.5 rounded-full bg-success" />
-                Probelektion gratis
+                Erste Lektion gratis
               </span>
               <h3 className="mt-3 font-display text-2xl font-semibold text-ink sm:text-3xl">
                 Einzelunterricht
@@ -68,7 +68,7 @@ export function Preis() {
                 >
                   <Check className="size-3.5" strokeWidth={3} />
                 </span>
-                <span className="text-base leading-relaxed text-ink/90">
+                <span className="text-sm leading-relaxed text-ink/90 sm:text-base">
                   {item}
                 </span>
               </li>
@@ -80,18 +80,22 @@ export function Preis() {
               href="#kontakt"
               className="group inline-flex h-14 flex-1 items-center justify-center gap-2 rounded-full bg-ink px-6 text-base font-semibold text-cream shadow-lg shadow-ink/20 transition hover:bg-brand-500"
             >
-              Gratis Probelektion vereinbaren
+              Gratis Probelektion buchen
               <ArrowRight className="size-4 transition group-hover:translate-x-0.5" />
             </a>
-            <a
-              href={PHONE_TEL}
-              className="inline-flex h-14 items-center justify-center gap-2 rounded-full border border-ink/15 px-6 text-base font-semibold text-ink transition hover:border-brand-400 hover:bg-brand-50 hover:text-brand-700"
-              aria-label={`Cristina anrufen: ${PHONE_DISPLAY}`}
+            <WhatsAppLink
+              source="preis"
+              className="inline-flex h-14 items-center justify-center gap-2 rounded-full border border-ink/15 px-6 text-base font-semibold text-ink transition hover:border-success hover:bg-success/5 hover:text-success-dark"
             >
-              <Phone className="size-5" /> Anruf: {PHONE_DISPLAY}
-            </a>
+              <MessageCircle className="size-5" /> WhatsApp
+            </WhatsAppLink>
           </div>
         </div>
+
+        <p className="mt-6 text-sm text-cream/60">
+          Pakete für Firmen oder Intensivkurse? Schreib mir – ich finde die
+          passende Lösung.
+        </p>
       </div>
     </section>
   );

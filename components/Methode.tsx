@@ -1,4 +1,4 @@
-import { Heart, MessagesSquare, Timer } from "lucide-react";
+import { BookOpen, MessagesSquare, Sparkles } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 type Step = {
@@ -11,24 +11,24 @@ type Step = {
 const STEPS: Step[] = [
   {
     number: "01",
-    title: "Wir reden über dich.",
+    title: "Dein persönlicher Lernplan",
     description:
-      "In der ersten Lektion erzählst du mir, warum du Spanisch lernen möchtest. Vielleicht der Schwiegersohn aus Madrid. Vielleicht das Ferienhaus an der Costa Blanca. Vielleicht einfach, weil die Sprache so schön klingt. Darauf baue ich den Unterricht auf.",
-    icon: Heart,
+      "Wir starten mit deinen Zielen, deinem Niveau und deinem Zeitplan. Daraus baue ich deinen massgeschneiderten Lernweg.",
+    icon: Sparkles,
   },
   {
     number: "02",
-    title: "Wir sprechen vom ersten Tag an.",
+    title: "Echte Praxis",
     description:
-      "Spanisch lernt man durch Sprechen, nicht nur durch Bücher. Deine ersten Sätze sagst du schon in der ersten Lektion. Das ist ein gutes Gefühl.",
-    icon: MessagesSquare,
+      "Aktuelle Themen, Alltagssituationen, hispanische Kultur. Keine langweiligen Aufgaben – du lernst, was du wirklich brauchst.",
+    icon: BookOpen,
   },
   {
     number: "03",
-    title: "Wir nehmen uns Zeit.",
+    title: "Sprechen, sprechen, sprechen",
     description:
-      "Etwas nicht verstanden? Wir gehen es nochmal durch. So oft du möchtest. Bei mir gibt es keine dummen Fragen, nur ungestellte.",
-    icon: Timer,
+      "Wir reden vom ersten Tag an Spanisch. Innerhalb kurzer Zeit baust du erste Sätze und Konversationen auf.",
+    icon: MessagesSquare,
   },
 ];
 
@@ -38,13 +38,13 @@ export function Methode() {
       <div className="mx-auto max-w-6xl">
         <div className="mx-auto max-w-2xl text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-brand-200 bg-brand-50 px-3 py-1 text-xs font-medium uppercase tracking-wider text-brand-700">
-            So läuft eine Lektion
+            Meine Methode
           </span>
           <h2 className="mt-4 font-display text-3xl font-semibold leading-tight tracking-tight text-ink sm:text-4xl">
-            So sieht eine Lektion mit mir aus
+            So lernst du Spanisch mit mir
           </h2>
           <p className="mt-3 text-base text-ink-soft sm:text-lg">
-            Pauken gibt es bei mir nicht. Sprechen schon ab der ersten Minute.
+            Du stehst im Mittelpunkt. Drei einfache Schritte – und du sprichst.
           </p>
         </div>
 
@@ -72,7 +72,7 @@ export function Methode() {
               <h3 className="mt-5 font-display text-xl font-semibold text-ink">
                 {title}
               </h3>
-              <p className="mt-2 text-base leading-relaxed text-ink-soft">
+              <p className="mt-2 text-sm leading-relaxed text-ink-soft">
                 {description}
               </p>
             </li>

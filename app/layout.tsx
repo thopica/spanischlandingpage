@@ -22,9 +22,9 @@ const SITE_URL = "https://onlinespanischlernen.ch";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title:
-    "Spanisch lernen in Zürich und online. Privatunterricht mit Cristina.",
+    "Spanisch lernen in Zürich & online — Privatunterricht mit Muttersprachlerin Cristina",
   description:
-    "Persönlicher Spanischunterricht mit Cristina, ausgebildete Muttersprachlerin aus Ecuador. 60 Minuten pro Lektion, online aus der ganzen Schweiz oder vor Ort in Zürich. Erste Probelektion gratis.",
+    "Persönlicher Spanischunterricht mit Cristina, ausgebildete Muttersprachlerin aus Ecuador. 60 Minuten pro Lektion, flexibel online aus der ganzen Schweiz oder vor Ort in Zürich. Erste Probelektion gratis.",
   keywords: [
     "Spanisch lernen Zürich",
     "Spanischkurs online Schweiz",
@@ -35,9 +35,9 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Spanisch lernen mit Cristina. Online und in Zürich.",
+    title: "Spanisch lernen mit Cristina — online & in Zürich",
     description:
-      "Persönlicher Einzelunterricht. 60 Minuten pro Lektion. Erste Lektion gratis.",
+      "Persönlich, flexibel, mit Freude. 60 Min pro Lektion. Erste Lektion gratis.",
     url: SITE_URL,
     siteName: "Spanisch mit Cristina",
     locale: "de_CH",
@@ -53,8 +53,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Spanisch lernen mit Cristina. Online und in Zürich.",
-    description: "Persönlicher Einzelunterricht. Erste Lektion gratis.",
+    title: "Spanisch lernen mit Cristina — online & in Zürich",
+    description: "Persönlich, flexibel, mit Freude. Erste Lektion gratis.",
     images: ["/images/cristina.jpg"],
   },
   robots: { index: true, follow: true },
