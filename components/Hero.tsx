@@ -22,9 +22,8 @@ export function Hero() {
           </span>
 
           <h1 className="mt-5 font-display text-[2.25rem] font-semibold leading-[1.05] tracking-tight text-ink sm:text-5xl lg:text-[3.5rem]">
-            Endlich fliessend{" "}
             <span className="relative whitespace-nowrap text-brand-500">
-              Spanisch
+              Spanisch lernen
               <svg
                 aria-hidden
                 className="absolute -bottom-2 left-0 w-full text-brand-300"
@@ -39,7 +38,7 @@ export function Hero() {
                 />
               </svg>
             </span>
-            {" "}— mit deiner persönlichen Lehrerin.
+            {" "}in Zürich &amp; online – mit deiner persönlichen Lehrerin.
           </h1>
 
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink-soft">
@@ -92,8 +91,8 @@ export function Hero() {
         <div className="relative">
           <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-brand-100 shadow-2xl shadow-ink/10 ring-1 ring-ink/5 sm:aspect-square md:aspect-[4/5]">
             <Image
-              src="/images/cristina.jpg"
-              alt="Cristina – Spanisch-Lehrerin und Muttersprachlerin aus Ecuador"
+              src="/images/cristina-unterricht.webp"
+              alt="Cristina beim Spanischunterricht – persönliche Spanischlehrerin in Zürich und online"
               fill
               priority
               sizes="(max-width: 768px) 100vw, 50vw"
