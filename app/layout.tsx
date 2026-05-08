@@ -47,9 +47,9 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/cristina.jpg",
-        width: 1280,
-        height: 800,
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
         alt: "Cristina gibt Spanischunterricht – persönliche Lehrerin in Zürich und online",
       },
     ],
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Spanisch lernen mit Cristina — online & in Zürich",
     description: "1:1 Privatunterricht, flexibel, CHF 60/Lektion. Erste Lektion gratis.",
-    images: ["/images/cristina.jpg"],
+    images: ["/images/og-image.jpg"],
   },
   robots: { index: true, follow: true },
 };
