@@ -21,12 +21,15 @@ const SITE_URL = "https://onlinespanischlernen.ch";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title:
-    "Spanisch lernen in Zürich & online — Privatunterricht mit Muttersprachlerin Cristina",
+  title: "Spanisch lernen Zürich & online | Privatunterricht – Cristina",
   description:
-    "Persönlicher Spanischunterricht mit Cristina, ausgebildete Muttersprachlerin aus Ecuador. 60 Minuten pro Lektion, flexibel online aus der ganzen Schweiz oder vor Ort in Zürich. Erste Probelektion gratis.",
+    "Spanisch lernen online oder in Zürich – 1:1 Privatunterricht mit Muttersprachlerin Cristina. Flexibel, persönlich, CHF 60/Lektion. Erste Probestunde gratis.",
   keywords: [
     "Spanisch lernen Zürich",
+    "Spanisch online lernen Schweiz",
+    "Spanisch lernen Basel",
+    "Spanisch lernen Bern",
+    "Spanisch lernen Luzern",
     "Spanischkurs online Schweiz",
     "Privatunterricht Spanisch",
     "Spanisch Muttersprachlerin",
@@ -37,7 +40,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Spanisch lernen mit Cristina — online & in Zürich",
     description:
-      "Persönlich, flexibel, mit Freude. 60 Min pro Lektion. Erste Lektion gratis.",
+      "1:1 Privatunterricht mit Muttersprachlerin. Flexibel, persönlich, CHF 60/Lektion. Erste Lektion gratis.",
     url: SITE_URL,
     siteName: "Spanisch mit Cristina",
     locale: "de_CH",
@@ -47,14 +50,14 @@ export const metadata: Metadata = {
         url: "/images/cristina.jpg",
         width: 1280,
         height: 800,
-        alt: "Cristina – Spanisch-Lehrerin und Muttersprachlerin aus Ecuador",
+        alt: "Cristina gibt Spanischunterricht – persönliche Lehrerin in Zürich und online",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Spanisch lernen mit Cristina — online & in Zürich",
-    description: "Persönlich, flexibel, mit Freude. Erste Lektion gratis.",
+    description: "1:1 Privatunterricht, flexibel, CHF 60/Lektion. Erste Lektion gratis.",
     images: ["/images/cristina.jpg"],
   },
   robots: { index: true, follow: true },
