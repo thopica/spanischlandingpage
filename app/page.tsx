@@ -98,6 +98,13 @@ const FAQ_SCHEMA = {
   ],
 };
 
+const WEBSITE_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Spanisch mit Cristina",
+  url: "https://onlinespanischlernen.ch",
+};
+
 export default function Home() {
   return (
     <>
@@ -121,6 +128,10 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBSITE_SCHEMA) }}
       />
     </>
   );
