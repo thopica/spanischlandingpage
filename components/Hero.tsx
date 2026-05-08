@@ -2,7 +2,14 @@ import Image from "next/image";
 import { ArrowRight, MessageCircle, Star } from "lucide-react";
 import { WhatsAppLink } from "@/components/WhatsAppLink";
 
-export function Hero() {
+type HeroProps = {
+  city?: string;
+  cityIntro?: string;
+};
+
+export function Hero({ city, cityIntro }: HeroProps = {}) {
+  const displayCity = city ?? "Zürich";
+
   return (
     <section className="relative overflow-hidden">
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-cream via-cream to-brand-50/70" />
@@ -18,7 +25,10 @@ export function Hero() {
       <div className="mx-auto grid max-w-6xl gap-10 px-4 pt-10 pb-16 md:grid-cols-2 md:items-center md:gap-12 md:px-8 md:pt-16 md:pb-24 lg:gap-16 lg:pt-20">
         <div className="flex flex-col">
           <span className="inline-flex w-fit items-center gap-2 rounded-full border border-brand-200 bg-brand-50 px-3 py-1 text-xs font-medium uppercase tracking-wider text-brand-700">
-            <span aria-hidden>★</span> Privatunterricht in Zürich &amp; online
+            <span aria-hidden>★</span>{" "}
+            {city
+              ? `Privatunterricht für ${city} & online`
+              : "Privatunterricht in Zürich & online"}
           </span>
 
           <h1 className="mt-5 font-display text-[2.25rem] font-semibold leading-[1.05] tracking-tight text-ink sm:text-5xl lg:text-[3.5rem]">
@@ -38,7 +48,7 @@ export function Hero() {
                 />
               </svg>
             </span>
-            {" "}in Zürich &amp; online – mit deiner persönlichen Lehrerin.
+            {` in ${displayCity} & online – mit deiner persönlichen Lehrerin.`}
           </h1>
 
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink-soft">
@@ -48,6 +58,12 @@ export function Hero() {
             online aus der ganzen Schweiz oder vor Ort in Zürich. Keine Abos, keine
             Verpflichtungen.
           </p>
+
+          {cityIntro && (
+            <p className="mt-3 max-w-xl text-base leading-relaxed text-ink-soft">
+              {cityIntro}
+            </p>
+          )}
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a
@@ -92,7 +108,7 @@ export function Hero() {
           <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-brand-100 shadow-2xl shadow-ink/10 ring-1 ring-ink/5 sm:aspect-square md:aspect-[4/5]">
             <Image
               src="/images/cristina-unterricht.webp"
-              alt="Cristina beim Spanischunterricht – persönliche Spanischlehrerin in Zürich und online"
+              alt={`Cristina beim Spanischunterricht – persönliche Spanischlehrerin in ${displayCity} und online`}
               fill
               priority
               sizes="(max-width: 768px) 100vw, 50vw"
