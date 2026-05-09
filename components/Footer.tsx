@@ -3,7 +3,7 @@ import { Mail, MessageCircle, Phone } from "lucide-react";
 import { EMAIL, EMAIL_MAILTO, PHONE_DISPLAY, PHONE_TEL } from "@/lib/links";
 import { WhatsAppLink } from "@/components/WhatsAppLink";
 
-export function Footer() {
+export function Footer({ onlineOnly = false }: { onlineOnly?: boolean }) {
   const year = new Date().getFullYear();
 
   return (
@@ -23,7 +23,7 @@ export function Footer() {
           </Link>
           <p className="mt-5 max-w-xs text-sm leading-relaxed text-cream/65">
             Massgeschneiderter Spanischunterricht — online aus der ganzen
-            Schweiz oder vor Ort in Zürich.
+            {onlineOnly ? " Schweiz." : " Schweiz oder vor Ort in Zürich."}
           </p>
         </div>
 

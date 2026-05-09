@@ -39,7 +39,7 @@ export const CITIES: City[] = [
     slug: "zug",
     name: "Zug",
     intro:
-      "In Zug lebst du international – Spanisch ist die perfekte nächste Sprache. Online-Privatunterricht mit Cristina, flexibel nach deinem Terminkalender.",
+      "Du wohnst in Zug und suchst einen Spanischkurs? Online-Privatunterricht mit Cristina ist die flexible Alternative – persönlich, individuell, vom Sofa aus.",
   },
   {
     slug: "aarau",

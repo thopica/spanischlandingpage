@@ -55,8 +55,10 @@ export function Hero({ city, cityIntro }: HeroProps = {}) {
             Massgeschneiderter Einzelunterricht mit Cristina, Muttersprachlerin aus
             Ecuador.{" "}
             <span className="font-semibold text-ink">60 Minuten pro Lektion</span>,
-            online aus der ganzen Schweiz oder vor Ort in Zürich. Keine Abos, keine
-            Verpflichtungen.
+            {city
+              ? " online aus der ganzen Schweiz."
+              : " online aus der ganzen Schweiz oder vor Ort in Zürich."}{" "}
+            Keine Abos, keine Verpflichtungen.
           </p>
 
           {cityIntro && (

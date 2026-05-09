@@ -21,15 +21,14 @@ const SITE_URL = "https://onlinespanischlernen.ch";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Spanisch lernen Zürich & online | Privatunterricht – Cristina",
+  title: "Spanisch lernen Zürich | Spanisch online lernen (Schweiz) – Cristina",
   description:
-    "Spanisch lernen online oder in Zürich – 1:1 Privatunterricht mit Muttersprachlerin Cristina. Flexibel, persönlich, CHF 60/Lektion. Erste Probestunde gratis.",
+    "Spanisch lernen in Zürich oder Spanisch online lernen in der Schweiz: 1:1 Privatunterricht mit Muttersprachlerin Cristina. Flexibel, persönlich, CHF 60/Lektion. Erste Probestunde gratis.",
   keywords: [
     "Spanisch lernen Zürich",
+    "Spanisch online lernen",
+    "Online Spanisch lernen Schweiz",
     "Spanisch online lernen Schweiz",
-    "Spanisch lernen Basel",
-    "Spanisch lernen Bern",
-    "Spanisch lernen Luzern",
     "Spanischkurs online Schweiz",
     "Privatunterricht Spanisch",
     "Spanisch Muttersprachlerin",
@@ -38,9 +37,9 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Spanisch lernen mit Cristina — online & in Zürich",
+    title: "Spanisch lernen Zürich & Spanisch online lernen Schweiz",
     description:
-      "1:1 Privatunterricht mit Muttersprachlerin. Flexibel, persönlich, CHF 60/Lektion. Erste Lektion gratis.",
+      "1:1 Privatunterricht in Zürich und online in der ganzen Schweiz. Flexibel, persönlich, CHF 60/Lektion. Erste Lektion gratis.",
     url: SITE_URL,
     siteName: "Spanisch mit Cristina",
     locale: "de_CH",
@@ -56,8 +55,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Spanisch lernen mit Cristina — online & in Zürich",
-    description: "1:1 Privatunterricht, flexibel, CHF 60/Lektion. Erste Lektion gratis.",
+    title: "Spanisch lernen Zürich & Spanisch online lernen Schweiz",
+    description:
+      "1:1 Privatunterricht in Zürich und online in der ganzen Schweiz. Flexibel, persönlich, CHF 60/Lektion.",
     images: ["/images/og-image.jpg"],
   },
   robots: { index: true, follow: true },

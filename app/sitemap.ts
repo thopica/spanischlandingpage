@@ -7,7 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
 
   const cityPages = CITIES.map((city) => ({
-    url: `${SITE_URL}/spanisch-lernen-${city.slug}`,
+    url: `${SITE_URL}/spanisch-lernen/${city.slug}`,
     lastModified: now,
     changeFrequency: "monthly" as const,
     priority: 0.8,

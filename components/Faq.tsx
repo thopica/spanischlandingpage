@@ -5,7 +5,7 @@ type FaqItem = {
   answer: string;
 };
 
-const FAQS: FaqItem[] = [
+const FAQS_DEFAULT: FaqItem[] = [
   {
     question: "Ich bin absoluter Anfänger – kann ich trotzdem starten?",
     answer:
@@ -33,7 +33,36 @@ const FAQS: FaqItem[] = [
   },
 ];
 
-export function Faq() {
+const FAQS_ONLINE_ONLY: FaqItem[] = [
+  {
+    question: "Ich bin absoluter Anfänger – kann ich trotzdem starten?",
+    answer:
+      "Absolut. Mehr als die Hälfte meiner Schüler:innen startet bei null. Wir beginnen ganz entspannt mit den Grundlagen und du wirst schon in den ersten Lektionen einfache Sätze auf Spanisch sagen können.",
+  },
+  {
+    question: "Wie viele Lektionen brauche ich, um etwas sagen zu können?",
+    answer:
+      "Das hängt von deinem Ziel ab. Für einfache Konversation im Urlaub reichen oft 8 – 12 Lektionen. Für berufliches Spanisch oder fliessende Konversation planen wir gemeinsam einen längeren Lernweg. Wir besprechen das in der Probelektion.",
+  },
+  {
+    question: "Funktioniert Online-Unterricht wirklich gut?",
+    answer:
+      "Ja, sehr gut. Du sparst Anfahrtszeit und lernst in deiner gewohnten Umgebung. Mit 1:1-Unterricht bekommst du volle Aufmerksamkeit, klare Struktur und viele Sprechphasen.",
+  },
+  {
+    question: "Wann findet der Unterricht statt?",
+    answer:
+      "Die Termine vereinbaren wir flexibel nach deinem Kalender – auch abends oder am Wochenende. Es gibt keinen festen Stundenplan, der dir den Stress nimmt.",
+  },
+  {
+    question: "Wie funktioniert die Bezahlung?",
+    answer:
+      "CHF 60 pro 60-Minuten-Lektion. Bezahlt wird, wann es dir passt – TWINT oder Banküberweisung. Keine Abos, keine Vorauszahlungen, keine versteckten Kosten.",
+  },
+];
+
+export function Faq({ onlineOnly = false }: { onlineOnly?: boolean }) {
+  const faqs = onlineOnly ? FAQS_ONLINE_ONLY : FAQS_DEFAULT;
   return (
     <section className="bg-cream px-4 py-20 md:px-8 md:py-28">
       <div className="mx-auto max-w-3xl">
@@ -50,7 +79,7 @@ export function Faq() {
         </div>
 
         <div className="mt-10 divide-y divide-ink/10 overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-ink/5 md:mt-14">
-          {FAQS.map(({ question, answer }) => (
+          {faqs.map(({ question, answer }) => (
             <details
               key={question}
               className="group px-5 py-1 transition open:bg-brand-50/40 sm:px-7"

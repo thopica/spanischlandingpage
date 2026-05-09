@@ -9,7 +9,16 @@ const INCLUSIONS = [
   "Zahlungsmethode frei wählbar (TWINT, Überweisung, Bar)",
 ];
 
-export function Preis() {
+const INCLUSIONS_ONLINE_ONLY = [
+  "60 Minuten reine Lektionszeit (kein 45-Minuten-Trick)",
+  "Privatunterricht 1:1, persönlich auf dich abgestimmt",
+  "Online aus der ganzen Schweiz",
+  "Keine Abos, keine Verpflichtungen – buche, wann es passt",
+  "Zahlungsmethode frei wählbar (TWINT, Überweisung)",
+];
+
+export function Preis({ onlineOnly = false }: { onlineOnly?: boolean }) {
+  const inclusions = onlineOnly ? INCLUSIONS_ONLINE_ONLY : INCLUSIONS;
   return (
     <section className="relative overflow-hidden bg-ink px-4 py-20 text-cream md:px-8 md:py-28">
       <div
@@ -44,7 +53,7 @@ export function Preis() {
                 Einzelunterricht
               </h3>
               <p className="mt-1 text-sm text-ink-soft">
-                Online oder vor Ort in Zürich
+                {onlineOnly ? "Online aus der ganzen Schweiz" : "Online oder vor Ort in Zürich"}
               </p>
             </div>
             <div className="text-right">
@@ -60,7 +69,7 @@ export function Preis() {
           </div>
 
           <ul className="mt-8 space-y-3 border-t border-ink/10 pt-7">
-            {INCLUSIONS.map((item) => (
+            {inclusions.map((item) => (
               <li key={item} className="flex items-start gap-3">
                 <span
                   aria-hidden

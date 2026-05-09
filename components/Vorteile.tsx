@@ -36,7 +36,36 @@ const VORTEILE: Vorteil[] = [
   },
 ];
 
-export function Vorteile() {
+const VORTEILE_ONLINE_ONLY: Vorteil[] = [
+  {
+    icon: UserRound,
+    title: "Einzelunterricht 1:1",
+    description:
+      "Volle Aufmerksamkeit, dein Tempo, dein Lernplan. Keine Ablenkung durch andere Teilnehmer:innen.",
+  },
+  {
+    icon: Clock,
+    title: "60 Minuten pro Lektion",
+    description:
+      "Genug Zeit, um Themen wirklich zu verstehen und zu üben.",
+    highlight: "25% mehr als der Marktstandard",
+  },
+  {
+    icon: MapPin,
+    title: "Flexibel & ortsunabhängig",
+    description:
+      "Online aus der ganzen Schweiz – du lernst bequem von zu Hause und passt die Lektionen deinem Alltag an.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Keine Abos, kein Risiko",
+    description:
+      "Faire CHF 60 pro Lektion. Du zahlst nur, wenn du wirklich Zeit hast – volle Freiheit.",
+  },
+];
+
+export function Vorteile({ onlineOnly = false }: { onlineOnly?: boolean }) {
+  const items = onlineOnly ? VORTEILE_ONLINE_ONLY : VORTEILE;
   return (
     <section className="bg-cream-dark px-4 py-20 md:px-8 md:py-28">
       <div className="mx-auto max-w-6xl">
@@ -54,7 +83,7 @@ export function Vorteile() {
         </div>
 
         <ul className="mt-12 grid gap-5 sm:grid-cols-2 md:mt-16 md:gap-6 lg:grid-cols-4">
-          {VORTEILE.map(({ icon: Icon, title, description, highlight }) => (
+          {items.map(({ icon: Icon, title, description, highlight }) => (
             <li
               key={title}
               className="group flex flex-col rounded-3xl bg-white p-7 shadow-sm ring-1 ring-ink/5 transition hover:-translate-y-0.5 hover:shadow-lg"

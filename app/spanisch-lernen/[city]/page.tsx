@@ -11,8 +11,8 @@ import { StickyMobileCta } from "@/components/StickyMobileCta";
 import { Testimonials } from "@/components/Testimonials";
 import { UeberMich } from "@/components/UeberMich";
 import { Vorteile } from "@/components/Vorteile";
-import { EMAIL } from "@/lib/links";
 import { CITIES, getCityBySlug } from "@/lib/cities";
+import { EMAIL } from "@/lib/links";
 
 const SITE_URL = "https://onlinespanischlernen.ch";
 
@@ -29,14 +29,14 @@ export async function generateMetadata({
   const cityData = getCityBySlug(city);
   if (!cityData) return {};
 
-  const slug = `/spanisch-lernen-${cityData.slug}`;
+  const slug = `/spanisch-lernen/${cityData.slug}`;
 
   return {
-    title: `Spanisch lernen ${cityData.name} & online | Privatunterricht – Cristina`,
-    description: `Spanisch lernen online für ${cityData.name} – 1:1 Privatunterricht mit Muttersprachlerin Cristina. Flexibel, persönlich, CHF 60/Lektion. Erste Probestunde gratis.`,
+    title: `Spanisch online lernen ${cityData.name} | 1:1 Privatunterricht – Cristina`,
+    description: `Spanisch online lernen für ${cityData.name}: 1:1 Privatunterricht mit Muttersprachlerin Cristina. Flexibel, persönlich, CHF 60/Lektion. Erste Probestunde gratis.`,
     alternates: { canonical: slug },
     openGraph: {
-      title: `Spanisch lernen in ${cityData.name} mit Cristina`,
+      title: `Spanisch online lernen in ${cityData.name} mit Cristina`,
       description:
         "1:1 Privatunterricht mit Muttersprachlerin. Flexibel, persönlich, CHF 60/Lektion. Erste Lektion gratis.",
       url: `${SITE_URL}${slug}`,
@@ -54,7 +54,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: `Spanisch lernen in ${cityData.name} mit Cristina`,
+      title: `Spanisch online lernen in ${cityData.name} mit Cristina`,
       description: "1:1 Privatunterricht, flexibel, CHF 60/Lektion. Erste Lektion gratis.",
       images: ["/images/og-image.jpg"],
     },
@@ -77,7 +77,7 @@ export default async function CityPage({
     name: "Spanisch mit Cristina",
     description: `Privatunterricht Spanisch mit Muttersprachlerin – online für ${cityData.name} und die ganze Schweiz.`,
     image: `${SITE_URL}/images/cristina-unterricht.webp`,
-    url: `${SITE_URL}/spanisch-lernen-${cityData.slug}`,
+    url: `${SITE_URL}/spanisch-lernen/${cityData.slug}`,
     telephone: "+41772920903",
     email: EMAIL,
     priceRange: "CHF 60",
@@ -91,16 +91,28 @@ export default async function CityPage({
     areaServed: [
       { "@type": "Country", name: "Schweiz" },
       { "@type": "City", name: cityData.name },
-      { "@type": "City", name: "Zürich" },
     ],
     serviceType: "Spanischunterricht",
     founder: { "@type": "Person", name: "Cristina Caamaño" },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.9",
-      bestRating: "5",
-      ratingCount: "4",
-    },
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Startseite",
+        item: SITE_URL,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: `Spanisch online lernen ${cityData.name}`,
+        item: `${SITE_URL}/spanisch-lernen/${cityData.slug}`,
+      },
+    ],
   };
 
   const faqSchema = {
@@ -125,10 +137,10 @@ export default async function CityPage({
       },
       {
         "@type": "Question",
-        name: "Online oder vor Ort in Zürich – was ist besser?",
+        name: "Funktioniert Online-Unterricht wirklich gut?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Beides funktioniert hervorragend. Online sparst du Zeit und kannst von überall in der Schweiz teilnehmen. Vor Ort in Zürich bietet mehr persönliche Atmosphäre. Du entscheidest – und kannst auch zwischen beiden Formaten wechseln.",
+          text: "Ja, sehr gut. Du sparst Anfahrtszeit und lernst in deiner gewohnten Umgebung. Mit 1:1-Unterricht bekommst du volle Aufmerksamkeit, klare Struktur und viele Sprechphasen.",
         },
       },
       {
@@ -144,7 +156,15 @@ export default async function CityPage({
         name: "Wie funktioniert die Bezahlung?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "CHF 60 pro 60-Minuten-Lektion. Bezahlt wird, wann es dir passt – TWINT, Banküberweisung oder bar in Zürich. Keine Abos, keine Vorauszahlungen, keine versteckten Kosten.",
+          text: "CHF 60 pro 60-Minuten-Lektion. Bezahlt wird, wann es dir passt – TWINT oder Banküberweisung. Keine Abos, keine Vorauszahlungen, keine versteckten Kosten.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: `Gibt es Unterricht vor Ort in ${cityData.name}?`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `In ${cityData.name} arbeite ich mit dir online. Persönliche Treffen vor Ort sind in Zürich möglich.`,
         },
       },
     ],
@@ -155,15 +175,15 @@ export default async function CityPage({
       <Header />
       <main>
         <Hero city={cityData.name} cityIntro={cityData.intro} />
-        <Vorteile />
+        <Vorteile onlineOnly />
         <Methode />
-        <Preis />
+        <Preis onlineOnly />
         <Testimonials />
         <UeberMich />
-        <Faq />
+        <Faq onlineOnly />
         <Kontakt />
       </main>
-      <Footer />
+      <Footer onlineOnly />
       <StickyMobileCta />
       <script
         type="application/ld+json"
@@ -172,6 +192,10 @@ export default async function CityPage({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
     </>
   );
