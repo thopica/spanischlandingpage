@@ -1,30 +1,22 @@
 import Link from "next/link";
 import { Mail, MessageCircle, Phone } from "lucide-react";
-import { SchweizCityLinks } from "@/components/SchweizCityLinks";
-import { EMAIL, EMAIL_MAILTO, PHONE_DISPLAY, PHONE_TEL } from "@/lib/links";
+import { SENIOREN_PATH } from "@/lib/senioren/constants";
+import {
+  EMAIL,
+  EMAIL_MAILTO,
+  PHONE_DISPLAY,
+  PHONE_TEL,
+} from "@/lib/links";
 import { WhatsAppLink } from "@/components/WhatsAppLink";
 
-export function Footer({
-  onlineOnly = false,
-  showSchweizCityLinks = false,
-}: {
-  onlineOnly?: boolean;
-  showSchweizCityLinks?: boolean;
-}) {
+export function SeniorenFooter() {
   const year = new Date().getFullYear();
 
   return (
     <footer className="bg-ink text-cream">
-      {showSchweizCityLinks && (
-        <div className="border-b border-cream/10 bg-cream-dark px-4 py-10 md:px-8 md:py-12">
-          <div className="mx-auto max-w-6xl">
-            <SchweizCityLinks />
-          </div>
-        </div>
-      )}
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 md:grid-cols-3 md:px-8 md:py-20">
         <div>
-          <Link href="/" className="inline-flex items-center gap-2.5">
+          <Link href={SENIOREN_PATH} className="inline-flex items-center gap-2.5">
             <span
               aria-hidden
               className="grid size-10 place-items-center rounded-full bg-brand-400 font-display text-lg font-bold text-cream"
@@ -36,8 +28,8 @@ export function Footer({
             </span>
           </Link>
           <p className="mt-5 max-w-xs text-sm leading-relaxed text-cream/65">
-            Massgeschneiderter Spanischunterricht online aus der ganzen
-            {onlineOnly ? " Schweiz." : " Schweiz oder vor Ort in Zürich."}
+            Persönlicher Spanisch-Einzelunterricht für Erwachsene und ab 60. In
+            deinem Tempo, online oder vor Ort in Zürich.
           </p>
         </div>
 
@@ -48,7 +40,7 @@ export function Footer({
           <ul className="mt-5 space-y-3 text-sm">
             <li>
               <WhatsAppLink
-                source="footer"
+                source="footer-senioren"
                 className="inline-flex items-center gap-2 text-cream transition hover:text-brand-200"
               >
                 <MessageCircle className="size-4 text-brand-300" /> WhatsApp
@@ -86,15 +78,21 @@ export function Footer({
                 Impressum
               </Link>
             </li>
+            <li>
+              <Link
+                href="/"
+                className="text-cream transition hover:text-brand-200"
+              >
+                Alle Angebote (Hauptseite)
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
 
       <div className="border-t border-cream/10">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-2 px-4 py-6 text-xs text-cream/55 sm:flex-row md:px-8">
-          <span>
-            © {year} Spanisch mit Cristina. Alle Rechte vorbehalten.
-          </span>
+          <span>© {year} Spanisch mit Cristina. Alle Rechte vorbehalten.</span>
           <span>Gemacht in Zürich · ¡Hasta pronto!</span>
         </div>
       </div>

@@ -20,6 +20,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: 1,
     },
+    {
+      url: `${SITE_URL}/spanisch-fur-senioren`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.95,
+    },
     ...cityPages,
     {
       url: `${SITE_URL}/impressum`,
