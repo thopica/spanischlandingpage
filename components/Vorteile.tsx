@@ -26,13 +26,13 @@ const VORTEILE: Vorteil[] = [
     icon: MapPin,
     title: "Flexibel & ortsunabhängig",
     description:
-      "Online aus der ganzen Schweiz oder vor Ort in Zürich – du wählst, was zu deinem Alltag passt.",
+      "Online aus der ganzen Schweiz oder vor Ort in Zürich. Du wählst, was zu deinem Alltag passt.",
   },
   {
     icon: ShieldCheck,
     title: "Keine Abos, kein Risiko",
     description:
-      "Faire CHF 60 pro Lektion. Du zahlst nur, wenn du wirklich Zeit hast – volle Freiheit.",
+      "Faire CHF 60 pro Lektion. Du zahlst nur, wenn du wirklich Zeit hast. Volle Freiheit.",
   },
 ];
 
@@ -54,13 +54,13 @@ const VORTEILE_ONLINE_ONLY: Vorteil[] = [
     icon: MapPin,
     title: "Flexibel & ortsunabhängig",
     description:
-      "Online aus der ganzen Schweiz – du lernst bequem von zu Hause und passt die Lektionen deinem Alltag an.",
+      "Online aus der ganzen Schweiz. Du lernst bequem von zu Hause und passt die Lektionen deinem Alltag an.",
   },
   {
     icon: ShieldCheck,
     title: "Keine Abos, kein Risiko",
     description:
-      "Faire CHF 60 pro Lektion. Du zahlst nur, wenn du wirklich Zeit hast – volle Freiheit.",
+      "Faire CHF 60 pro Lektion. Du zahlst nur, wenn du wirklich Zeit hast. Volle Freiheit.",
   },
 ];
 
@@ -77,7 +77,7 @@ export function Vorteile({ onlineOnly = false }: { onlineOnly?: boolean }) {
             Warum Schüler:innen mit mir lernen
           </h2>
           <p className="mt-3 text-base text-ink-soft sm:text-lg">
-            Unterricht, der sich wirklich nach dir richtet – nicht nach einem
+            Unterricht, der sich wirklich nach dir richtet, nicht nach einem
             Standard-Curriculum.
           </p>
         </div>

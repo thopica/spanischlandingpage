@@ -26,7 +26,7 @@ export function UeberMich() {
           <div className="relative aspect-square overflow-hidden rounded-[2rem] bg-brand-100 shadow-xl shadow-ink/15 ring-1 ring-ink/5">
             <Image
               src="/images/cristina-portrait.jpg"
-              alt="Cristina Caamaño – Spanisch-Lehrerin in Zürich"
+              alt="Cristina Caamaño, Spanisch-Lehrerin in Zürich"
               fill
               sizes="(max-width: 768px) 100vw, 40vw"
               className="object-cover"
@@ -47,14 +47,14 @@ export function UeberMich() {
             Über mich
           </span>
           <h2 className="mt-4 font-display text-3xl font-semibold leading-tight tracking-tight text-ink sm:text-4xl">
-            Spanisch lernen mit Leidenschaft – seit 15&nbsp;Jahren.
+            Spanisch lernen mit Leidenschaft seit 15&nbsp;Jahren.
           </h2>
 
           <div className="mt-6 space-y-4 text-base leading-relaxed text-ink-soft sm:text-lg">
             <p>
               Ursprünglich komme ich aus{" "}
-              <span className="font-semibold text-ink">Ecuador</span> – ich bin
-              also spanische Muttersprachlerin und kenne die Feinheiten der
+              <span className="font-semibold text-ink">Ecuador</span> und bin
+              spanische Muttersprachlerin und kenne die Feinheiten der
               Sprache und Kultur genau.
             </p>
             <p>
@@ -63,7 +63,7 @@ export function UeberMich() {
               <span className="font-semibold text-ink">
                 SVEB-zertifizierte Erwachsenenbildnerin
               </span>{" "}
-              verfüge ich über fundiertes pädagogisches Fachwissen – so biete ich
+              verfüge ich über fundiertes pädagogisches Fachwissen. So biete ich
               dir effizientes, strukturiertes Sprachtraining.
             </p>
             <p>

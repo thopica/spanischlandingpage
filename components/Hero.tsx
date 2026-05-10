@@ -24,31 +24,8 @@ export function Hero({ city, cityIntro }: HeroProps = {}) {
 
       <div className="mx-auto grid max-w-6xl gap-10 px-4 pt-10 pb-16 md:grid-cols-2 md:items-center md:gap-12 md:px-8 md:pt-16 md:pb-24 lg:gap-16 lg:pt-20">
         <div className="flex flex-col">
-          <span className="inline-flex w-fit items-center gap-2 rounded-full border border-brand-200 bg-brand-50 px-3 py-1 text-xs font-medium uppercase tracking-wider text-brand-700">
-            <span aria-hidden>★</span>{" "}
-            {city
-              ? `Privatunterricht für ${city} & online`
-              : "Privatunterricht in Zürich & online"}
-          </span>
-
-          <h1 className="mt-5 font-display text-[2.25rem] font-semibold leading-[1.05] tracking-tight text-ink sm:text-5xl lg:text-[3.5rem]">
-            <span className="relative whitespace-nowrap text-brand-500">
-              Spanisch lernen
-              <svg
-                aria-hidden
-                className="absolute -bottom-2 left-0 w-full text-brand-300"
-                viewBox="0 0 200 12"
-                fill="none"
-              >
-                <path
-                  d="M2 9C50 3 150 3 198 9"
-                  stroke="currentColor"
-                  strokeWidth="3"
-                  strokeLinecap="round"
-                />
-              </svg>
-            </span>
-            {` in ${displayCity} & online – mit deiner persönlichen Lehrerin.`}
+          <h1 className="font-display text-[2.25rem] font-semibold leading-[1.05] tracking-tight text-ink sm:text-5xl lg:text-[3.5rem]">
+            {`Spanisch lernen in ${displayCity} & online, mit deiner persönlichen Lehrerin.`}
           </h1>
 
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink-soft">
@@ -110,7 +87,7 @@ export function Hero({ city, cityIntro }: HeroProps = {}) {
           <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-brand-100 shadow-2xl shadow-ink/10 ring-1 ring-ink/5 sm:aspect-square md:aspect-[4/5]">
             <Image
               src="/images/cristina-unterricht.webp"
-              alt={`Cristina beim Spanischunterricht – persönliche Spanischlehrerin in ${displayCity} und online`}
+              alt={`Cristina beim Spanischunterricht, persönliche Spanischlehrerin in ${displayCity} und online`}
               fill
               priority
               sizes="(max-width: 768px) 100vw, 50vw"

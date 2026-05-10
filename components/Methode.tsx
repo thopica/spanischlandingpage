@@ -20,7 +20,7 @@ const STEPS: Step[] = [
     number: "02",
     title: "Echte Praxis",
     description:
-      "Aktuelle Themen, Alltagssituationen, hispanische Kultur. Keine langweiligen Aufgaben – du lernst, was du wirklich brauchst.",
+      "Aktuelle Themen, Alltagssituationen, hispanische Kultur. Keine langweiligen Aufgaben. Du lernst, was du wirklich brauchst.",
     icon: BookOpen,
   },
   {
@@ -44,7 +44,7 @@ export function Methode() {
             So lernst du Spanisch mit mir
           </h2>
           <p className="mt-3 text-base text-ink-soft sm:text-lg">
-            Du stehst im Mittelpunkt. Drei einfache Schritte – und du sprichst.
+            Du stehst im Mittelpunkt. Drei einfache Schritte, und schon sprichst du.
           </p>
         </div>
 

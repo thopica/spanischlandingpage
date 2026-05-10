@@ -4,7 +4,7 @@ import { ArrowLeft, Mail, Phone } from "lucide-react";
 import { EMAIL, PHONE_DISPLAY, PHONE_TEL } from "@/lib/links";
 
 export const metadata: Metadata = {
-  title: "Impressum — Spanisch mit Cristina",
+  title: "Impressum | Spanisch mit Cristina",
   description: "Rechtliche Informationen zur Website von Cristina Caamaño.",
   robots: { index: false, follow: true },
 };

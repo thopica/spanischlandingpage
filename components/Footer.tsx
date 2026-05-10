@@ -22,7 +22,7 @@ export function Footer({ onlineOnly = false }: { onlineOnly?: boolean }) {
             </span>
           </Link>
           <p className="mt-5 max-w-xs text-sm leading-relaxed text-cream/65">
-            Massgeschneiderter Spanischunterricht — online aus der ganzen
+            Massgeschneiderter Spanischunterricht online aus der ganzen
             {onlineOnly ? " Schweiz." : " Schweiz oder vor Ort in Zürich."}
           </p>
         </div>

@@ -65,7 +65,7 @@ export function Kontakt() {
     if (!WEB3FORMS_KEY) {
       setSubmitState("error");
       setErrorMsg(
-        "Das Formular ist noch nicht aktiviert. Bitte schreib mir kurz per WhatsApp – ich melde mich umgehend.",
+        "Das Formular ist noch nicht aktiviert. Bitte schreib mir kurz per WhatsApp. Ich melde mich umgehend.",
       );
       return;
     }
@@ -85,11 +85,11 @@ export function Kontakt() {
         },
         body: JSON.stringify({
           access_key: WEB3FORMS_KEY,
-          subject: `Neue Anfrage von Landingpage – ${data.name}`,
-          from_name: "Spanisch mit Cristina – Landingpage",
+          subject: `Neue Anfrage (Landingpage): ${data.name}`,
+          from_name: "Spanisch mit Cristina (Landingpage)",
           name: data.name,
           email: data.email,
-          phone: data.phone || "—",
+          phone: data.phone || "(nicht angegeben)",
           niveau: niveauLabel,
           message: data.message,
         }),
@@ -137,7 +137,7 @@ export function Kontakt() {
             Bereit für deine gratis Probelektion?
           </h2>
           <p className="mt-3 text-base text-ink-soft sm:text-lg">
-            Schreib mir kurz, was du lernen möchtest – ich melde mich
+            Schreib mir kurz, was du lernen möchtest. Ich melde mich
             normalerweise innerhalb weniger Stunden.
           </p>
         </div>
@@ -361,7 +361,7 @@ function Field({
       {hint && !error && (
         <span className="mt-0.5 block text-xs text-ink-soft">{hint}</span>
       )}
-      {/* Password managers (e.g. LastPass) inject nodes into inputs — suppress mismatch noise */}
+      {/* Password managers (e.g. LastPass) inject nodes into inputs; suppress mismatch noise */}
       <div className="mt-1.5" suppressHydrationWarning>
         {children}
       </div>
@@ -384,7 +384,7 @@ function SuccessState({ onReset }: { onReset: () => void }) {
         ¡Gracias! Deine Anfrage ist da.
       </h3>
       <p className="mt-2 max-w-md text-base text-ink-soft">
-        Ich melde mich innerhalb weniger Stunden bei dir – meistens per E-Mail
+        Ich melde mich innerhalb weniger Stunden bei dir, meistens per E-Mail
         oder WhatsApp. Bis bald!
       </p>
       <button

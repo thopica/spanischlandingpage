@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Fraunces } from "next/font/google";
+import { Inter, Manrope } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 
@@ -9,11 +9,10 @@ const inter = Inter({
   display: "swap",
 });
 
-const fraunces = Fraunces({
+const manrope = Manrope({
   variable: "--font-fraunces",
   subsets: ["latin"],
   display: "swap",
-  axes: ["opsz"],
 });
 
 const META_PIXEL_ID = "838735575945300";
@@ -21,7 +20,7 @@ const SITE_URL = "https://onlinespanischlernen.ch";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Spanisch lernen Zürich | Spanisch online lernen (Schweiz) – Cristina",
+  title: "Spanisch lernen Zürich | Spanisch online lernen (Schweiz) | Cristina",
   description:
     "Spanisch lernen in Zürich oder Spanisch online lernen in der Schweiz: 1:1 Privatunterricht mit Muttersprachlerin Cristina. Flexibel, persönlich, CHF 60/Lektion. Erste Probestunde gratis.",
   keywords: [
@@ -49,7 +48,7 @@ export const metadata: Metadata = {
         url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Cristina gibt Spanischunterricht – persönliche Lehrerin in Zürich und online",
+        alt: "Cristina gibt Spanischunterricht, persönliche Lehrerin in Zürich und online",
       },
     ],
   },
@@ -77,7 +76,7 @@ export default function RootLayout({
   return (
     <html
       lang="de-CH"
-      className={`${inter.variable} ${fraunces.variable} h-full antialiased`}
+      className={`${inter.variable} ${manrope.variable} h-full antialiased`}
     >
       <body className="min-h-full">
         {children}

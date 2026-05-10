@@ -7,42 +7,52 @@ type FaqItem = {
 
 const FAQS_DEFAULT: FaqItem[] = [
   {
-    question: "Ich bin absoluter Anfänger – kann ich trotzdem starten?",
+    question: "Ich bin absoluter Anfänger. Kann ich trotzdem starten?",
     answer:
       "Absolut. Mehr als die Hälfte meiner Schüler:innen startet bei null. Wir beginnen ganz entspannt mit den Grundlagen und du wirst schon in den ersten Lektionen einfache Sätze auf Spanisch sagen können.",
   },
   {
     question: "Wie viele Lektionen brauche ich, um etwas sagen zu können?",
     answer:
-      "Das hängt von deinem Ziel ab. Für einfache Konversation im Urlaub reichen oft 8 – 12 Lektionen. Für berufliches Spanisch oder fliessende Konversation planen wir gemeinsam einen längeren Lernweg. Wir besprechen das in der Probelektion.",
+      "Das hängt von deinem Ziel ab. Für einfache Konversation im Urlaub reichen oft 8 bis 12 Lektionen. Für berufliches Spanisch oder fliessende Konversation planen wir gemeinsam einen längeren Lernweg. Wir besprechen das in der Probelektion.",
   },
   {
-    question: "Online oder vor Ort in Zürich – was ist besser?",
+    question: "Online oder vor Ort in Zürich: Was ist besser?",
     answer:
-      "Beides funktioniert hervorragend. Online sparst du Zeit und kannst von überall in der Schweiz teilnehmen. Vor Ort in Zürich bietet mehr persönliche Atmosphäre. Du entscheidest – und kannst auch zwischen beiden Formaten wechseln.",
+      "Beides funktioniert hervorragend. Online sparst du Zeit und kannst von überall in der Schweiz teilnehmen. Vor Ort in Zürich bietet mehr persönliche Atmosphäre. Du entscheidest. Du kannst auch zwischen beiden Formaten wechseln.",
   },
   {
     question: "Wann findet der Unterricht statt?",
     answer:
-      "Die Termine vereinbaren wir flexibel nach deinem Kalender – auch abends oder am Wochenende. Es gibt keinen festen Stundenplan, der dir den Stress nimmt.",
+      "Die Termine vereinbaren wir flexibel nach deinem Kalender, auch abends oder am Wochenende. Es gibt keinen festen Stundenplan, der dir den Stress nimmt.",
   },
   {
     question: "Wie funktioniert die Bezahlung?",
     answer:
-      "CHF 60 pro 60-Minuten-Lektion. Bezahlt wird, wann es dir passt – TWINT, Banküberweisung oder bar in Zürich. Keine Abos, keine Vorauszahlungen, keine versteckten Kosten.",
+      "CHF 60 pro 60-Minuten-Lektion. Bezahlt wird, wann es dir passt, zum Beispiel per TWINT, Banküberweisung oder bar in Zürich. Keine Abos, keine Vorauszahlungen, keine versteckten Kosten.",
+  },
+  {
+    question: "Arbeitest du mit einem Lehrbuch?",
+    answer:
+      "Das hängt von dir ab. Manche Schülerinnen wollen ein klares, strukturiertes Vorgehen mit einem Buch. Dafür empfehle ich dir ein passendes. Andere lernen lieber frei, mit eigenen Themen und Materialien, die ich für dich zusammenstelle. In der ersten Lektion finden wir gemeinsam heraus, was zu dir passt.",
+  },
+  {
+    question: "Muss ich Hausaufgaben machen?",
+    answer:
+      "Nein, nichts muss. Wer mag, bekommt von mir Material zum Üben zwischen den Lektionen. Wer einfach nur in der Stunde lernen möchte, ist auch willkommen.",
   },
 ];
 
 const FAQS_ONLINE_ONLY: FaqItem[] = [
   {
-    question: "Ich bin absoluter Anfänger – kann ich trotzdem starten?",
+    question: "Ich bin absoluter Anfänger. Kann ich trotzdem starten?",
     answer:
       "Absolut. Mehr als die Hälfte meiner Schüler:innen startet bei null. Wir beginnen ganz entspannt mit den Grundlagen und du wirst schon in den ersten Lektionen einfache Sätze auf Spanisch sagen können.",
   },
   {
     question: "Wie viele Lektionen brauche ich, um etwas sagen zu können?",
     answer:
-      "Das hängt von deinem Ziel ab. Für einfache Konversation im Urlaub reichen oft 8 – 12 Lektionen. Für berufliches Spanisch oder fliessende Konversation planen wir gemeinsam einen längeren Lernweg. Wir besprechen das in der Probelektion.",
+      "Das hängt von deinem Ziel ab. Für einfache Konversation im Urlaub reichen oft 8 bis 12 Lektionen. Für berufliches Spanisch oder fliessende Konversation planen wir gemeinsam einen längeren Lernweg. Wir besprechen das in der Probelektion.",
   },
   {
     question: "Funktioniert Online-Unterricht wirklich gut?",
@@ -52,12 +62,22 @@ const FAQS_ONLINE_ONLY: FaqItem[] = [
   {
     question: "Wann findet der Unterricht statt?",
     answer:
-      "Die Termine vereinbaren wir flexibel nach deinem Kalender – auch abends oder am Wochenende. Es gibt keinen festen Stundenplan, der dir den Stress nimmt.",
+      "Die Termine vereinbaren wir flexibel nach deinem Kalender, auch abends oder am Wochenende. Es gibt keinen festen Stundenplan, der dir den Stress nimmt.",
   },
   {
     question: "Wie funktioniert die Bezahlung?",
     answer:
-      "CHF 60 pro 60-Minuten-Lektion. Bezahlt wird, wann es dir passt – TWINT oder Banküberweisung. Keine Abos, keine Vorauszahlungen, keine versteckten Kosten.",
+      "CHF 60 pro 60-Minuten-Lektion. Bezahlt wird, wann es dir passt, zum Beispiel per TWINT oder Banküberweisung. Keine Abos, keine Vorauszahlungen, keine versteckten Kosten.",
+  },
+  {
+    question: "Arbeitest du mit einem Lehrbuch?",
+    answer:
+      "Das hängt von dir ab. Manche Schülerinnen wollen ein klares, strukturiertes Vorgehen mit einem Buch. Dafür empfehle ich dir ein passendes. Andere lernen lieber frei, mit eigenen Themen und Materialien, die ich für dich zusammenstelle. In der ersten Lektion finden wir gemeinsam heraus, was zu dir passt.",
+  },
+  {
+    question: "Muss ich Hausaufgaben machen?",
+    answer:
+      "Nein, nichts muss. Wer mag, bekommt von mir Material zum Üben zwischen den Lektionen. Wer einfach nur in der Stunde lernen möchte, ist auch willkommen.",
   },
 ];
 
@@ -71,7 +91,7 @@ export function Faq({ onlineOnly = false }: { onlineOnly?: boolean }) {
             Häufige Fragen
           </span>
           <h2 className="mt-4 font-display text-3xl font-semibold leading-tight tracking-tight text-ink sm:text-4xl">
-            Was du wissen möchtest – beantwortet
+            Antworten auf deine Fragen
           </h2>
           <p className="mt-3 text-base text-ink-soft sm:text-lg">
             Wenn deine Frage nicht dabei ist, schreib mir einfach per WhatsApp.

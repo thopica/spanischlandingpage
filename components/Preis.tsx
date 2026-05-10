@@ -5,7 +5,7 @@ const INCLUSIONS = [
   "60 Minuten reine Lektionszeit (kein 45-Minuten-Trick)",
   "Privatunterricht 1:1, persönlich auf dich abgestimmt",
   "Online aus der ganzen Schweiz oder vor Ort in Zürich",
-  "Keine Abos, keine Verpflichtungen – buche, wann es passt",
+  "Keine Abos, keine Verpflichtungen. Buche, wann es passt",
   "Zahlungsmethode frei wählbar (TWINT, Überweisung, Bar)",
 ];
 
@@ -13,7 +13,7 @@ const INCLUSIONS_ONLINE_ONLY = [
   "60 Minuten reine Lektionszeit (kein 45-Minuten-Trick)",
   "Privatunterricht 1:1, persönlich auf dich abgestimmt",
   "Online aus der ganzen Schweiz",
-  "Keine Abos, keine Verpflichtungen – buche, wann es passt",
+  "Keine Abos, keine Verpflichtungen. Buche, wann es passt",
   "Zahlungsmethode frei wählbar (TWINT, Überweisung)",
 ];
 
@@ -102,7 +102,7 @@ export function Preis({ onlineOnly = false }: { onlineOnly?: boolean }) {
         </div>
 
         <p className="mt-6 text-sm text-cream/60">
-          Pakete für Firmen oder Intensivkurse? Schreib mir – ich finde die
+          Pakete für Firmen oder Intensivkurse? Schreib mir, dann finde ich die
           passende Lösung.
         </p>
       </div>

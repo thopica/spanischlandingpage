@@ -32,7 +32,7 @@ export async function generateMetadata({
   const slug = `/spanisch-lernen/${cityData.slug}`;
 
   return {
-    title: `Spanisch online lernen ${cityData.name} | 1:1 Privatunterricht – Cristina`,
+    title: `Spanisch online lernen ${cityData.name} | 1:1 Privatunterricht mit Cristina`,
     description: `Spanisch online lernen für ${cityData.name}: 1:1 Privatunterricht mit Muttersprachlerin Cristina. Flexibel, persönlich, CHF 60/Lektion. Erste Probestunde gratis.`,
     alternates: { canonical: slug },
     openGraph: {
@@ -48,7 +48,7 @@ export async function generateMetadata({
           url: "/images/og-image.jpg",
           width: 1200,
           height: 630,
-          alt: `Cristina gibt Spanischunterricht für ${cityData.name} – online Spanischlehrerin`,
+          alt: `Cristina gibt Spanischunterricht für ${cityData.name} und online`,
         },
       ],
     },
@@ -75,7 +75,7 @@ export default async function CityPage({
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     name: "Spanisch mit Cristina",
-    description: `Privatunterricht Spanisch mit Muttersprachlerin – online für ${cityData.name} und die ganze Schweiz.`,
+    description: `Privatunterricht Spanisch mit Muttersprachlerin, online für ${cityData.name} und die ganze Schweiz.`,
     image: `${SITE_URL}/images/cristina-unterricht.webp`,
     url: `${SITE_URL}/spanisch-lernen/${cityData.slug}`,
     telephone: "+41772920903",
@@ -121,7 +121,7 @@ export default async function CityPage({
     mainEntity: [
       {
         "@type": "Question",
-        name: "Ich bin absoluter Anfänger – kann ich trotzdem starten?",
+        name: "Ich bin absoluter Anfänger. Kann ich trotzdem starten?",
         acceptedAnswer: {
           "@type": "Answer",
           text: "Absolut. Mehr als die Hälfte meiner Schüler:innen startet bei null. Wir beginnen ganz entspannt mit den Grundlagen und du wirst schon in den ersten Lektionen einfache Sätze auf Spanisch sagen können.",
@@ -132,7 +132,7 @@ export default async function CityPage({
         name: "Wie viele Lektionen brauche ich, um etwas sagen zu können?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Das hängt von deinem Ziel ab. Für einfache Konversation im Urlaub reichen oft 8 – 12 Lektionen. Für berufliches Spanisch oder fliessende Konversation planen wir gemeinsam einen längeren Lernweg. Wir besprechen das in der Probelektion.",
+          text: "Das hängt von deinem Ziel ab. Für einfache Konversation im Urlaub reichen oft 8 bis 12 Lektionen. Für berufliches Spanisch oder fliessende Konversation planen wir gemeinsam einen längeren Lernweg. Wir besprechen das in der Probelektion.",
         },
       },
       {
@@ -148,7 +148,7 @@ export default async function CityPage({
         name: "Wann findet der Unterricht statt?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Die Termine vereinbaren wir flexibel nach deinem Kalender – auch abends oder am Wochenende. Es gibt keinen festen Stundenplan, der dir den Stress nimmt.",
+          text: "Die Termine vereinbaren wir flexibel nach deinem Kalender, auch abends oder am Wochenende. Es gibt keinen festen Stundenplan, der dir den Stress nimmt.",
         },
       },
       {
@@ -156,7 +156,23 @@ export default async function CityPage({
         name: "Wie funktioniert die Bezahlung?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "CHF 60 pro 60-Minuten-Lektion. Bezahlt wird, wann es dir passt – TWINT oder Banküberweisung. Keine Abos, keine Vorauszahlungen, keine versteckten Kosten.",
+          text: "CHF 60 pro 60-Minuten-Lektion. Bezahlt wird, wann es dir passt, zum Beispiel per TWINT oder Banküberweisung. Keine Abos, keine Vorauszahlungen, keine versteckten Kosten.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Arbeitest du mit einem Lehrbuch?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Das hängt von dir ab. Manche Schülerinnen wollen ein klares, strukturiertes Vorgehen mit einem Buch. Dafür empfehle ich dir ein passendes. Andere lernen lieber frei, mit eigenen Themen und Materialien, die ich für dich zusammenstelle. In der ersten Lektion finden wir gemeinsam heraus, was zu dir passt.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Muss ich Hausaufgaben machen?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Nein, nichts muss. Wer mag, bekommt von mir Material zum Üben zwischen den Lektionen. Wer einfach nur in der Stunde lernen möchte, ist auch willkommen.",
         },
       },
       {
